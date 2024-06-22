@@ -1,0 +1,2288 @@
+@font-face {
+  font-family: "fontello";
+  src: url("../fonts/fontello.eot?25777772");
+  src: url("../fonts/fontello.eot?25777772#iefix") format("embedded-opentype"),
+    url("../fonts/fontello.woff2?25777772") format("woff2"),
+    url("../fonts/fontello.woff?25777772") format("woff"),
+    url("../fonts/fontello.ttf?25777772") format("truetype"),
+    url("../fonts/fontello.svg?25777772#fontello") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e800";
+} /* '' */
+.icon-location:before {
+  content: "\e801";
+} /* '' */
+.icon-play:before {
+  content: "\e802";
+} /* '' */
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+section.home div.welcome div.items a.item .img-group p span {
+  display: block;
+}
+body,
+main {
+  left: 0;
+  transition: left 0.3s;
+}
+body {
+  line-height: 1;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+body,
+div.container,
+main {
+  position: relative;
+}
+main {
+  display: block;
+}
+main button.action-audio {
+  display: inline-block;
+  background: 0 0;
+  color: #000;
+  padding: 0;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.2s;
+}
+@media only screen and (min-width: 601px) {
+  main button.action-audio {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+    top: 1.875rem;
+    right: 1.875rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main button.action-audio {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    top: 0.625rem;
+    right: 0.625rem;
+  }
+}
+main button.action-audio span,
+section.content button.godown span,
+section.content.image div.inner a.popup-video span,
+section.content.image div.video-access a.popup-video span,
+section.content.image div.video-access div.description a.popup-video span,
+section.content.text div.inner a.popup-video span,
+section.content.text div.video-access div.description a.popup-video span {
+  display: none;
+}
+@media only screen and (min-width: 601px) {
+  main button.action-audio:hover {
+    color: #666;
+  }
+}
+.a-hidden {
+  border: 0 none;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.imagen,
+.texto {
+  width: 1.3em;
+  height: 1em;
+  position: relative;
+  display: inline;
+}
+
+.bg-span {
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0.4em 0.9em;
+  line-height: 1.8em;
+}
+.bg-span.orange {
+  background-image: url(../img/bg-title-orange.png);
+  padding: 0.1em 1.4em;
+}
+.bg-span.turquoise {
+  background-image: url(../img/bg-title-turquoise.png);
+}
+.bg-span.yellow {
+  background-image: url(../img/bg-title-yellow.png);
+}
+.animate-fade {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.animate-fade.done {
+  opacity: 1;
+}
+@media only screen and (min-width: 601px) {
+  .animate-fade-desktop {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .animate-fade-desktop.done {
+    opacity: 1;
+  }
+  .animate-clip-left {
+    overflow: hidden;
+    width: 0;
+    transition: width 1s ease 0s;
+  }
+  .animate-clip-left.done {
+    width: 100%;
+  }
+  .animate-clip-top {
+    overflow: hidden;
+    height: 0;
+    transition: height 1s ease 0s;
+  }
+  .animate-clip-top.done {
+    height: 100%;
+  }
+}
+body.orange main button.action-audio,
+body.turquoise main button.action-audio,
+body.yellow main button.action-audio {
+  color: #fff;
+}
+.pace-running > :not(.pace) {
+  display: none;
+}
+header button.menusidebar {
+  display: inline-block;
+  background-color: #001f3f;
+  font-size: 1.625rem;
+  line-height: 1.625rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.375rem 0.625rem;
+  position: fixed;
+  cursor: pointer;
+  transition: left 0.3s, background-color 0.2s ease 0s;
+  white-space: nowrap;
+  z-index: 10;
+}
+@media only screen and (min-width: 601px) {
+  header button.menusidebar {
+    top: 4rem;
+    left: 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header button.menusidebar {
+    top: 0rem;
+    left: 0rem;
+  }
+}
+header button.menusidebar.icon-menu::before {
+  margin-left: 0;
+}
+header button.menusidebar span {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 601px) {
+  header button.menusidebar:hover {
+    background-color: #cab229;
+  }
+}
+header nav.main,
+.fondo {
+  
+  background-image: url(../img/bg-gray-light.png); /* Ruta de tu imagen */
+  height: 100%;
+  
+}
+
+section.home {
+  background: #f5f5f5 url(../img/bg-gray-light.png);
+  height: 100%;
+  overflow-y: auto;
+}
+header nav.main {
+  text-align: left;
+  top: 0;
+  width: 17.5rem;
+  z-index: 1;
+  box-shadow: inset -25px 0 28px -17px rgba(0, 0, 0, 0.1);
+  left: -17.5rem;
+  transition: left 0.3s ease 0s;
+  padding: 1.5rem;
+  position: fixed;
+}
+header nav.main a.gohome h2,
+section.home div.welcome h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+header nav.main a.gohome h2,
+header nav.main div.block a.about span {
+  background-color: #001f3f;
+  color: #fff;
+  box-shadow: 10px 10px 9px -6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+header nav.main a.gohome h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0.15em 1em;
+}
+@media only screen and (min-width: 601px) {
+  header nav.main a.gohome:hover h2 {
+    background-color: #cab229;
+  }
+}
+header nav.main div.block {
+  margin-top: 2.5rem;
+}
+header nav.main div.block h3 {
+  padding-left: 1.25rem;
+  margin: 0 0 0.625rem;
+}
+header nav.main div.block a.about,
+header nav.main div.block h3 a {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+header nav.main div.block h3 a span,
+section.home div.definition p,
+section.home div.definition p.small {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 601px) {
+  header nav.main div.block h3 a:hover {
+    color: #666;
+  }
+}
+header nav.main div.block ul {
+  margin: 0 0 0 -1.25rem;
+  padding: 0;
+}
+header nav.main div.block ul li {
+  list-style: none outside none;
+  margin: 0 0 0.875rem;
+}
+header nav.main div.block ul li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding-left: 2.5rem;
+  position: relative;
+  transition: color 0.2s;
+}
+header nav.main div.block ul li a::before {
+  display: block;
+  width: 2.125rem;
+  height: 100%;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  speak: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 601px) {
+  header nav.main div.block ul li a:hover {
+    color: #cab229;
+  }
+}
+header nav.main div.block a.about {
+  font-size: 1rem;
+}
+header nav.main div.block a.about span {
+  display: inline-block;
+  letter-spacing: -0.02em;
+  padding: 0.15em 0.6em;
+}
+@media only screen and (min-width: 601px) {
+  header nav.main div.block a.about:hover {
+    color: #666;
+  }
+  header nav.main div.block a.about:hover span {
+    background-color: #cab229;
+    color: #fff;
+  }
+}
+body.menusidebar {
+  overflow: hidden;
+}
+body.menusidebar div.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body.menusidebar main,
+body.menusidebar section.content.dynamic-background div.background {
+  left: 17.5rem;
+}
+@media only screen and (min-width: 601px) {
+  body.menusidebar header button.menusidebar {
+    left: 19.375rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body.menusidebar header button.menusidebar {
+    left: 17.5rem;
+  }
+}
+body.menusidebar header nav.main {
+  left: 0;
+}
+body.orange header button.menusidebar {
+  color: #000;
+  background-color: #ff734e;
+}
+@media only screen and (min-width: 601px) {
+  body.orange header button.menusidebar:hover {
+    background-color: #ff967a;
+  }
+}
+body.turquoise header button.menusidebar {
+  color: #000;
+  background-color: #5cb0b1;
+}
+@media only screen and (min-width: 601px) {
+  body.turquoise header button.menusidebar:hover {
+    background-color: #85c4c5;
+  }
+}
+body.yellow header button.menusidebar {
+  color: #000;
+  background-color: #fec82d;
+}
+@media only screen and (min-width: 601px) {
+  body.yellow header button.menusidebar:hover {
+    background-color: #fed662;
+  }
+}
+body.white header button.menusidebar {
+  color: #000;
+  background-color: #fff;
+}
+@media only screen and (min-width: 601px) {
+  body.white header button.menusidebar:hover {
+    background-color: #f5f5f5;
+  }
+}
+section.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 601px) {
+  section.home::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+section.home div.definition {
+  text-align: center;
+  width: 100%;
+  max-width: 48.125rem;
+  padding: 0 0.9375rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.home div.definition p {
+  line-height: 1.375rem;
+  color: #000;
+  text-align: center;
+}
+section.home div.definition p.small {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+section.home div.welcome {
+  text-align: center;
+  padding-top: 1.875rem;
+  position: relative;
+}
+
+@media only screen and (min-width: 601px) {
+  .contenedor_imagen_quienessomos {
+    width: 19.509rem;
+    height: 20rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.875rem; /* Agrega márgenes alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+
+    border: 0.125rem solid #160466; /* Grosor y color del borde */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+    padding: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #contenedor_principal {
+    width: 90%; /* 90% del ancho del contenedor padre */
+    max-width: 1800px; /* Establece un límite máximo de 1800px */
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 4rem; /* Evita que los márgenes externos se sumen */
+  }
+  
+  .contenedor_padre_1 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
+  }
+  
+  .contenedor_padre_2 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .contenedor_padre_2 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
+  }
+  .contenedor_portada-podcast {
+    width: 24rem;
+    height: 10rem;
+    display: inline-block;
+    vertical-align: top;
+    /* Agrega márgenes alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+
+    border: 0.125rem solid #160466; /* Grosor y color del borde */
+    border-radius: 0.625rem; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+    padding: 1.25rem; /* Evita que los márgenes externos se sumen */
+    margin-top: 5rem;
+  }
+  .contenedor_portada-podcast img {
+    width: 21.3rem;
+    height: 7.4rem;
+  }
+  
+}
+
+.contenedor-padre_galeria{
+  width: 100%;
+  height: auto;
+  
+  
+}
+.contenedor-padre_galeria h2{
+  color: #000;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+
+}
+
+@media only screen and (min-width: 601px) {
+  .contenedor_portada-podcast {
+    width: 70rem;
+    height: 20rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.875rem; /* Agrega márgenes alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+
+    border: 0.125rem solid #160466; /* Grosor y color del borde */
+    border-radius: 0.625rem; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+    padding: 1.25rem; /* Evita que los márgenes externos se sumen */
+    margin-top: 2rem;
+  }
+  .contenedor_portada-podcast img {
+    width: 67rem;
+    height: 17rem;
+  }
+  
+  
+  
+  .contenedor_galeria {
+    width: 100%;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+
+  
+  .contenedor_galeria figure{
+    position:relative;
+    height: 250px;
+    cursor: pointer;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    display: inline-block;
+    margin: 3.5rem;
+    left: 1.5rem;
+}
+.contenedor_galeria figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+}
+.contenedor_galeria figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,103,123,0.7);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.contenedor_galeria figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor_galeria figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.contenedor_galeria figure:hover > img{
+    transform: scale(1.3);
+}
+.contenedor_galeria figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+}
+.contenedor_galeria figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .contenedor_audios-podcast {
+    width: 12rem;
+    height: 12rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.875rem; /* Agrega márgenes alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+
+    border: 0.125rem solid #160466; /* Grosor y color del borde */
+    border-radius: 0.625rem; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+    padding: 1.25rem; /* Evita que los márgenes externos se sumen */
+    margin-top: 2rem;
+  }
+  .contenedor_audios-podcast audio {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+  }
+  .contenedor_audios-podcast img {
+    width: 8rem;
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .contenedor_audios-podcast {
+    width: 18rem;
+    height: 18rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.875rem; /* Agrega márgenes alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+
+    border: 0.125rem solid #160466; /* Grosor y color del borde */
+    border-radius: 0.625rem; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+    padding: 1.25rem; /* Evita que los márgenes externos se sumen */
+    margin-top: 2rem;
+  }
+  .contenedor_audios-podcast audio {
+    width: 100%;
+  }
+  .contenedor_audios-podcast img {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contenedor_imagen_quienessomos {
+    width: 19.509rem;
+    height: 20rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.875rem; /* Agrega márgenes alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+
+    border: 0.125rem solid #160466; /* Grosor y color del borde */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+    padding: 1.25rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #contenedor_principal {
+    width: 100%; /* 90% del ancho del contenedor padre */
+    max-width: 1800px; /* Establece un límite máximo de 1800px */
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 4rem; /* Evita que los márgenes externos se sumen */
+  }
+}
+
+@media (max-width: 1366px) {
+  #contenedor_principal {
+    width: 100%; /* 90% del ancho del contenedor padre */
+    max-width: 1800px; /* Establece un límite máximo de 1800px */
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 4rem; /* Evita que los márgenes externos se sumen */
+  }
+  section.home div.welcome div.items a.item.orange {
+    top: 0rem;
+    left: 0;
+  }
+
+  section.home div.welcome {
+    text-align: center;
+    padding-top: 0.5rem;
+    position: relative;
+  }
+
+  #contenedor_principal {
+    margin-top: 6rem; /* Evita que los márgenes externos se sumen */
+  }
+  .contenedor_portada-podcast{
+    margin-top: 7rem;
+  }
+  
+  .contenedor_galeria figure{
+    position:relative;
+    height: 150px;
+    cursor: pointer;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    margin: 2.2rem;
+}
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item.orange .img img {
+    width: 20rem;
+    border-radius: 50px;
+    margin-top: 2rem;
+  }
+  section.home div.welcome div.items a.item.turquoise .img img {
+    width: 20rem;
+    border-radius: 50px;
+  }
+  section.home div.welcome div.items a.item.yellow .img img {
+    width: 20rem;
+    border-radius: 50px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+section.home div.welcome a.logo {
+  display: block;
+  background: url(../img/logo.png) no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+}
+.logo2 {
+  margin-left: 60rem;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome a.logo {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 0.625rem;
+    transition: opacity 0.2s;
+    margin-right: 1.989rem;
+  }
+  section.home div.welcome a.logo:hover {
+    opacity: 0.7;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome a.logo {
+    width: 10rem;
+    height: 10rem;
+    margin: 1.875rem auto 0.625rem;
+    margin-top: 2rem;
+    margin-bottom: -5rem;
+  }
+}
+section.home div.welcome h1 {
+  line-height: 1em;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome h1 {
+    background-color: #000;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 6.875rem;
+    font-weight: 800;
+    box-shadow: 10px 17px 42px -1px rgba(0, 0, 0, 0.33);
+    padding: 0.2em 0.8em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome h1 {
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items {
+    position: absolute;
+    width: 79.5rem;
+    top: 6.25rem;
+    left: 50%;
+    transform-origin: top left;
+    transform: translateX(-50%);
+  }
+  section.home div.welcome div.items::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items {
+    margin-top: 1.25rem;
+  }
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item {
+    display: inline-block;
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item {
+    display: block;
+  }
+}
+section.home div.welcome div.items a.item .img-group {
+  position: relative;
+  transition: opacity 0.2s;
+}
+section.home div.welcome div.items a.item .img-group .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section.home div.welcome div.items a.item .img-group .img:first-of-type {
+  position: relative;
+}
+section.home div.welcome div.items a.item .img-group .img img,
+section.subhome div.inner nav.submenu {
+  width: 100%;
+}
+section.home div.welcome div.items a.item .img-group p {
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item .img-group p {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item .img-group p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item .img-group p span {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item .img-group p span {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+}
+section.home div.welcome div.items a.item h2 {
+  display: inline-block;
+  background-color: #001f3f;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.2em 1.2em;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+  transition: opacity 1s, background-color 0.2s;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.375rem;
+    font-weight: 800;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+}
+section.home div.welcome div.items a.item h2 span {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.375rem;
+  font-weight: 400;
+  text-transform: none;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item h2 span {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.375rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item h2 span {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+section.home div.welcome div.items a.item h2 span::before {
+  margin-left: -1em;
+  vertical-align: top;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item h2 span::before {
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item h2 span::before {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item.orange {
+    top: 2rem;
+    left: 0;
+  }
+  section.home div.welcome div.items a.item.orange .img img {
+    width: 25rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  section.home div.welcome div.items a.item.orange .img img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+}
+section.home div.welcome div.items a.item.orange h2 {
+  color: #ffffff;
+  margin-top: -2.125rem;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item.turquoise {
+    top: 2rem;
+    left: 27.552rem;
+  }
+  section.home div.welcome div.items a.item.turquoise .img img {
+    width: 25rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  section.home div.welcome div.items a.item.turquoise .img img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+}
+section.home div.welcome div.items a.item.turquoise h2 {
+  color: #ffffff;
+  margin-top: -2.125rem;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item.yellow {
+    top: 2rem;
+    left: 55rem;
+  }
+  section.home div.welcome div.items a.item.yellow .img img {
+    width: 25rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  section.home div.welcome div.items a.item.yellow .img img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+}
+section.home div.welcome div.items a.item.yellow h2 {
+  color: #ffffff;
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item.yellow h2 {
+    margin-top: -2.125rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home div.welcome div.items a.item.yellow h2 {
+    margin-top: -6.25rem;
+  }
+}
+@media only screen and (min-width: 601px) {
+  section.home div.welcome div.items a.item:hover .img-group {
+    opacity: 0.7;
+  }
+  section.home div.welcome div.items a.item:hover h2 {
+    background-color: #cab229;
+  }
+}
+section.home button.skip {
+  display: inline-block;
+  background-color: #001f3f;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s;
+}
+@media only screen and (min-width: 601px) {
+  section.home button.skip {
+    padding: 1rem 1.125rem;
+    font-size: 1rem;
+    bottom: 1.875rem;
+    right: 1.875rem;
+  }
+  section.home button.skip:hover {
+    background-color: #666;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.home button.skip {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.75rem;
+    bottom: 1.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+section.subhome {
+  background-color: #000;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow: auto;
+}
+section.content.opening div.background,
+section.subhome div.background {
+  background-color: #000;
+  background-image: attr(data-image-src url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 601px) {
+  section.subhome div.background {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.background {
+    height: 21.875rem;
+  }
+}
+section.subhome div.background::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+@media only screen and (min-width: 601px) {
+  section.subhome div.background::before {
+    height: 70%;
+    bottom: 0;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.7) 0%,
+      transparent 65%
+    );
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.background::before {
+    height: 100%;
+    top: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 60%,
+      #000 100%
+    );
+  }
+}
+@media only screen and (min-width: 992px) {
+  section.subhome div.inner {
+    width: calc(100% - 90px);
+    position: absolute;
+    bottom: 2.8125rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  section.subhome div.inner {
+    width: calc(100% - 50px);
+    position: absolute;
+    bottom: 1.5625rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner {
+    margin-top: -1.25rem;
+    position: relative;
+  }
+}
+section.content.opening div.inner div.intro,
+section.subhome div.inner div.intro {
+  text-align: center;
+  width: 100%;
+  max-width: 38.125rem;
+  padding: 0 0.9375rem;
+  margin: 0 auto 2.5rem;
+}
+section.content.opening div.inner div.intro h1,
+section.subhome div.inner div.intro h1 {
+  display: block;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media only screen and (min-width: 601px) {
+  section.subhome div.inner div.intro h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.375rem;
+    font-weight: 800;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner div.intro h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.625rem;
+    font-weight: 800;
+  }
+}
+section.subhome div.inner div.intro h2 {
+  display: inline-block;
+  color: #fff;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  margin: -0.2em 0 0;
+}
+@media only screen and (min-width: 601px) {
+  section.subhome div.inner div.intro h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner div.intro h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+section.content.opening div.inner div.intro p,
+section.subhome div.inner div.intro p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin: 1.875rem 0 0;
+}
+section.subhome div.inner nav.submenu ul {
+  margin: 0;
+  padding: 0;
+}
+section.subhome div.inner nav.submenu ul li {
+  list-style: none outside none;
+}
+@media only screen and (min-width: 601px) {
+  section.subhome div.inner nav.submenu ul li {
+    display: block;
+    float: left;
+    width: calc(33% - 6px);
+    vertical-align: top;
+    margin: 0 0.375rem 0 0;
+  }
+  section.subhome div.inner nav.submenu ul li:last-of-type {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner nav.submenu ul li {
+    width: 100%;
+    padding: 0 0.1875rem 0.1875rem;
+  }
+}
+section.subhome div.inner nav.submenu ul li a {
+  display: block;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  transition: background-color 0.2s;
+}
+@media only screen and (min-width: 992px) {
+  section.subhome div.inner nav.submenu ul li a {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    height: 6.25rem;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  section.subhome div.inner nav.submenu ul li a {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    height: 6.25rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner nav.submenu ul li a {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    height: 5.3125rem;
+  }
+}
+section.subhome div.inner nav.submenu ul li a::before {
+  display: block;
+  width: 3.75rem;
+  font-size: 3rem;
+  line-height: 1em;
+  text-align: center;
+  speak: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+@media only screen and (min-width: 992px) {
+  section.subhome div.inner nav.submenu ul li a::before {
+    font-size: 3rem;
+    left: 0.875rem;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  section.subhome div.inner nav.submenu ul li a::before {
+    font-size: 2.25rem;
+    left: 0.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner nav.submenu ul li a::before {
+    font-size: 2.5rem;
+  }
+}
+section.subhome div.inner nav.submenu ul li a span {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 992px) {
+  section.subhome div.inner nav.submenu ul li a span {
+    left: 5.3125rem;
+    padding-right: 1.25rem;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  section.subhome div.inner nav.submenu ul li a span {
+    left: 4.0625rem;
+    padding-right: 0.625rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.subhome div.inner nav.submenu ul li a span {
+    left: 4rem;
+    padding-right: 0.9375rem;
+  }
+}
+body.orange section.subhome div.inner nav.submenu ul li a {
+  background-color: #ff734e;
+}
+@media only screen and (min-width: 601px) {
+  body.orange section.subhome div.inner nav.submenu ul li a:hover {
+    background-color: #ff967a;
+  }
+}
+body.turquoise section.subhome div.inner nav.submenu ul li a {
+  background-color: #5cb0b1;
+}
+@media only screen and (min-width: 601px) {
+  body.turquoise section.subhome div.inner nav.submenu ul li a:hover {
+    background-color: #85c4c5;
+  }
+}
+body.yellow section.subhome div.inner nav.submenu ul li a {
+  background-color: #fec82d;
+}
+@media only screen and (min-width: 601px) {
+  body.yellow section.subhome div.inner nav.submenu ul li a:hover {
+    background-color: #fed662;
+  }
+}
+section.content.opening {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@media only screen and (min-width: 601px) {
+  section.content.opening div.background {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.opening div.background {
+    height: 21.875rem;
+  }
+}
+section.content.opening div.background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 601px) {
+  section.content.opening div.background::before {
+    background-color: #000;
+    opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.opening div.background::before {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 60%,
+      #000 100%
+    );
+  }
+}
+section.content.opening div.inner {
+  text-align: center;
+}
+@media only screen and (min-width: 601px) {
+  section.content.opening div.inner {
+    width: calc(100% - 90px);
+    position: absolute;
+    bottom: 2.8125rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.opening div.inner {
+    margin-top: -1.25rem;
+    position: relative;
+  }
+}
+section.content.opening div.inner div.intro {
+  max-width: 52.5rem;
+}
+@media only screen and (min-width: 601px) {
+  section.content.opening div.inner div.intro h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.25rem;
+    font-weight: 800;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.opening div.inner div.intro h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+}
+section.content.opening div.inner div.intro h1 span {
+  display: block;
+  line-height: 1.1em;
+}
+@media only screen and (min-width: 601px) {
+  section.content.opening div.inner div.intro h1 span {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.opening div.inner div.intro h1 span {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+}
+section.content.opening,
+section.content.text {
+  background-color: #ffffff;
+  min-height: 100vh;
+  overflow: auto;
+}
+section.content.text div.about,
+section.content.text div.inner {
+  width: 100%;
+  max-width: 41.875rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 601px) {
+  section.content.text div.about,
+  section.content.text div.inner {
+    padding: 7.5rem 1.5625rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.text div.about,
+  section.content.text div.inner {
+    padding: 4.6875rem 1.5625rem;
+  }
+}
+section.content.graphic,
+section.content.image {
+  background-color: #000;
+  min-height: 100vh;
+  position: relative;
+}
+section.content.graphic div.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 601px) {
+  section.content.graphic div.inner {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.graphic div.inner {
+    width: 90%;
+  }
+}
+section.content.graphic div.inner a.zoom-image {
+  outline: none;
+  cursor: zoom-in;
+}
+section.content.graphic div.inner a.zoom-image img {
+  max-width: 100%;
+  border: 2px solid #fff;
+}
+section.content.image {
+  overflow: auto;
+}
+section.content.image div.background {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: left 0.3s, opacity 0.5s ease 0s;
+}
+section.content.image div.background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.background::before {
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      transparent 100%
+    );
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.background::before {
+    background-color: #000;
+    opacity: 0.5;
+  }
+}
+section.content.image div.background.no-layer::before {
+  content: "";
+  display: none;
+}
+section.content.image div.background.for-video::before {
+  background-color: #000;
+  opacity: 0.5;
+}
+section.content.image div.background.video {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.background.video video {
+    display: none;
+  }
+}
+section.content.image div.background.video video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+section.content.image div.background.image {
+  width: 100%;
+  height: 100vh;
+  background-image: attr(data-image-src url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.content.image div.background.active {
+  opacity: 1;
+}
+section.content.image div.inner {
+  width: 100%;
+  max-width: 34.375rem;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.inner {
+    padding: 7.5rem 1.5625rem;
+    margin: 0 5.25rem 0 auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.inner {
+    padding: 4.6875rem 1.5625rem;
+  }
+}
+section.content.image div.inner.central {
+  width: 100%;
+  max-width: 41.875rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.inner.central {
+    padding: 7.5rem 1.5625rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.inner.central {
+    padding: 4.6875rem 1.5625rem;
+  }
+}
+section.content.image div.video-access {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+section.content.image div.video-access a.popup-video {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.video-access a.popup-video {
+    width: 10rem;
+    height: 10rem;
+    font-size: 7.5rem;
+    line-height: 10rem;
+    border: 3px solid #fff;
+    transition: color 0.3s, border-color 0.3s;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.video-access a.popup-video {
+    width: 6.25rem;
+    height: 6.25rem;
+    font-size: 4.375rem;
+    line-height: 6.25rem;
+    border: 2px solid #fff;
+  }
+}
+section.content.image div.inner a.popup-video::before,
+section.content.image div.video-access a.popup-video::before,
+section.content.image div.video-access div.description a.popup-video::before,
+section.content.text div.inner a.popup-video::before,
+section.content.text div.video-access div.description a.popup-video::before {
+  margin: 0 0 0 0.1em;
+}
+section.content.image div.video-access div.description {
+  width: 100%;
+  max-width: 41.875rem;
+  text-align: center;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1.5625rem;
+}
+section.content.image div.video-access div.description a.popup-video {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+section.content.image div.video-access button.godown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.video-access button.godown {
+    bottom: 2.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.video-access button.godown {
+    bottom: 0.875rem;
+  }
+}
+section.content.image div.inner a.popup-video,
+section.content.image div.video-access div.description a.popup-video,
+section.content.text div.inner a.popup-video,
+section.content.text div.video-access div.description a.popup-video {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 auto 2.5rem;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.inner a.popup-video,
+  section.content.image div.video-access div.description a.popup-video,
+  section.content.text div.inner a.popup-video,
+  section.content.text div.video-access div.description a.popup-video {
+    width: 10rem;
+    height: 10rem;
+    font-size: 7.5rem;
+    line-height: 10rem;
+    border: 3px solid #fff;
+    transition: color 0.3s, border-color 0.3s;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.inner a.popup-video,
+  section.content.image div.video-access div.description a.popup-video,
+  section.content.text div.inner a.popup-video,
+  section.content.text div.video-access div.description a.popup-video {
+    width: 6.25rem;
+    height: 6.25rem;
+    font-size: 4.375rem;
+    line-height: 6.25rem;
+    border: 2px solid #fff;
+  }
+}
+section.content.image div.about p,
+section.content.image div.inner p,
+section.content.image div.video-access div.description p,
+section.content.text div.about p,
+section.content.text div.inner p,
+section.content.text div.video-access div.description p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 1.25rem;
+}
+section.content.image div.about p b,
+section.content.image div.inner blockquote p b,
+section.content.image div.inner p b,
+section.content.image div.video-access div.description blockquote p b,
+section.content.image div.video-access div.description p b,
+section.content.text div.about p b,
+section.content.text div.inner blockquote p b,
+section.content.text div.inner p b,
+section.content.text div.video-access div.description blockquote p b,
+section.content.text div.video-access div.description p b {
+  font-weight: 800;
+}
+section.content.image div.inner p i,
+section.content.image div.video-access div.description p i,
+section.content.text div.inner p i,
+section.content.text div.video-access div.description p i {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.015em;
+}
+section.content.image div.inner p.photo-credit,
+section.content.image div.video-access div.description p.photo-credit,
+section.content.text div.inner p.photo-credit,
+section.content.text div.video-access div.description p.photo-credit {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin-top: 6.25rem;
+}
+section.content.image div.inner p a,
+section.content.image div.inner p a:visited,
+section.content.image div.video-access div.description p a,
+section.content.image div.video-access div.description p a:visited,
+section.content.text div.inner p a,
+section.content.text div.inner p a:visited,
+section.content.text div.video-access div.description p a,
+section.content.text div.video-access div.description p a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+section.content.image div.inner p a:hover,
+section.content.image div.inner p a:visited:hover,
+section.content.image div.video-access div.description p a:hover,
+section.content.image div.video-access div.description p a:visited:hover,
+section.content.text div.inner p a:hover,
+section.content.text div.inner p a:visited:hover,
+section.content.text div.video-access div.description p a:hover,
+section.content.text div.video-access div.description p a:visited:hover {
+  text-decoration: underline;
+}
+section.content.image div.inner p.name,
+section.content.image div.video-access div.description p.name,
+section.content.text div.inner p.name,
+section.content.text div.video-access div.description p.name {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+section.content.image div.inner p.position,
+section.content.image div.video-access div.description p.position,
+section.content.text div.inner p.position,
+section.content.text div.video-access div.description p.position {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -0.625rem;
+  margin-bottom: 1.25rem;
+}
+section.content.image div.about div.center:last-of-type,
+section.content.image div.about p:last-of-type,
+section.content.image div.inner p:last-of-type,
+section.content.image div.video-access div.description p:last-of-type,
+section.content.text div.about div.center:last-of-type,
+section.content.text div.about p:last-of-type,
+section.content.text div.inner p:last-of-type,
+section.content.text div.video-access div.description p:last-of-type {
+  margin-bottom: 0;
+}
+section.content.image div.inner blockquote,
+section.content.image div.video-access div.description blockquote,
+section.content.text div.inner blockquote,
+section.content.text div.video-access div.description blockquote {
+  position: relative;
+  text-align: left;
+  padding-left: 3.75rem;
+  margin: 1.875rem 0 2.5rem;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.inner blockquote,
+  section.content.image div.video-access div.description blockquote,
+  section.content.text div.inner blockquote,
+  section.content.text div.video-access div.description blockquote {
+    padding-left: 3.75rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.inner blockquote,
+  section.content.image div.video-access div.description blockquote,
+  section.content.text div.inner blockquote,
+  section.content.text div.video-access div.description blockquote {
+    padding-left: 3.125rem;
+  }
+}
+section.content.image div.inner blockquote::before,
+section.content.image div.video-access div.description blockquote::before,
+section.content.text div.inner blockquote::before,
+section.content.text div.video-access div.description blockquote::before {
+  content: "“";
+  position: absolute;
+  speak: none;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.inner blockquote::before,
+  section.content.image div.video-access div.description blockquote::before,
+  section.content.text div.inner blockquote::before,
+  section.content.text div.video-access div.description blockquote::before {
+    font-family: "Raleway", sans-serif;
+    font-size: 11.25rem;
+    font-weight: 400;
+    top: -1rem;
+    left: -0.625rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.inner blockquote::before,
+  section.content.image div.video-access div.description blockquote::before,
+  section.content.text div.inner blockquote::before,
+  section.content.text div.video-access div.description blockquote::before {
+    font-family: "Raleway", sans-serif;
+    font-size: 8.75rem;
+    font-weight: 400;
+    top: -0.625rem;
+    left: -0.5rem;
+  }
+}
+section.content.image div.inner blockquote p,
+section.content.image div.video-access div.description blockquote p,
+section.content.text div.inner blockquote p,
+section.content.text div.video-access div.description blockquote p {
+  color: #fff;
+  margin: 0 0 1.25rem;
+}
+@media only screen and (min-width: 601px) {
+  section.content.image div.inner blockquote p,
+  section.content.image div.video-access div.description blockquote p,
+  section.content.text div.inner blockquote p,
+  section.content.text div.video-access div.description blockquote p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.015em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.image div.inner blockquote p,
+  section.content.image div.video-access div.description blockquote p,
+  section.content.text div.inner blockquote p,
+  section.content.text div.video-access div.description blockquote p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.015em;
+  }
+}
+section.content.image div.inner ul.credits,
+section.content.image div.video-access div.description ul.credits,
+section.content.text div.inner ul.credits,
+section.content.text div.video-access div.description ul.credits {
+  display: block;
+  border-top: 2px solid #f5f5f5;
+  padding: 2.5rem 0 0;
+  margin: 3.75rem 0 0;
+}
+section.content.image div.inner ul.credits li,
+section.content.image div.video-access div.description ul.credits li,
+section.content.text div.inner ul.credits li,
+section.content.text div.video-access div.description ul.credits li {
+  list-style: none outside none;
+  margin-bottom: 0.875rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+section.content.image div.inner ul.credits li b,
+section.content.image div.video-access div.description ul.credits li b,
+section.content.text div.inner ul.credits li b,
+section.content.text div.video-access div.description ul.credits li b {
+  font-weight: 600;
+}
+section.content.image div.inner a.zoom-image,
+section.content.image div.video-access div.description a.zoom-image,
+section.content.text div.inner a.zoom-image,
+section.content.text div.video-access div.description a.zoom-image {
+  display: block;
+  width: 100%;
+  outline: none;
+  margin: 2.5rem 0;
+  cursor: zoom-in;
+}
+section.content.image div.inner a.zoom-image img,
+section.content.image div.video-access div.description a.zoom-image img,
+section.content.text div.inner a.zoom-image img,
+section.content.text div.video-access div.description a.zoom-image img {
+  max-width: 100%;
+}
+section.content button.godown,
+section.content.image div.about p a,
+section.content.image div.about p a:visited,
+section.content.text div.about p a,
+section.content.text div.about p a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+section.content.image div.about p a:hover,
+section.content.image div.about p a:visited:hover,
+section.content.text div.about p a:hover,
+section.content.text div.about p a:visited:hover {
+  text-decoration: underline;
+}
+section.content.image div.about h1,
+section.content.text div.about h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1.875rem;
+}
+section.content.image div.about h2,
+section.content.text div.about h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+section.content.image div.about h3,
+section.content.text div.about h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 1.25rem 0 0.625rem;
+}
+section.content.image div.about div.center,
+section.content.text div.about div.center {
+  text-align: center;
+  margin: 5rem 0;
+}
+section.content div.center {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+section.content div.bottom {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+@media only screen and (min-width: 601px) {
+  section.content div.bottom {
+    bottom: 2.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content div.bottom {
+    bottom: 0.875rem;
+  }
+}
+section.content button.godown {
+  display: inline-block;
+  text-align: center;
+  background: 0 0;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  section.content button.godown {
+    margin-bottom: 1.5rem;
+  }
+}
+section.content button.godown::before {
+  display: block;
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 0 0.3125rem;
+}
+section.content.opening button.godown span {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 601px) {
+  section.content.opening button.godown span {
+    display: block;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.content.opening button.godown span {
+    display: none;
+  }
+}
+
+body.orange section.content.image div.inner blockquote::before,
+body.orange section.content.image div.inner p a,
+body.orange section.content.image div.inner p a:visited,
+body.orange section.content.image div.inner p.name,
+body.orange
+  section.content.image
+  div.video-access
+  div.description
+  blockquote::before,
+body.orange section.content.image div.video-access div.description p a,
+body.orange section.content.image div.video-access div.description p a:visited,
+body.orange section.content.image div.video-access div.description p.name,
+body.orange section.content.text div.inner blockquote::before,
+body.orange section.content.text div.inner p a,
+body.orange section.content.text div.inner p a:visited,
+body.orange section.content.text div.inner p.name {
+  color: #ff734e;
+}
+body.turquoise section.content.image div.inner blockquote::before,
+body.turquoise section.content.image div.inner p.a,
+body.turquoise section.content.image div.inner p.a:visited,
+body.turquoise section.content.image div.inner p.name,
+body.turquoise
+  section.content.image
+  div.video-access
+  div.description
+  blockquote::before,
+body.turquoise section.content.image div.video-access div.description p.a,
+body.turquoise
+  section.content.image
+  div.video-access
+  div.description
+  p.a:visited,
+body.turquoise section.content.image div.video-access div.description p.name,
+body.turquoise section.content.text div.inner blockquote::before,
+body.turquoise section.content.text div.inner p.a,
+body.turquoise section.content.text div.inner p.a:visited,
+body.turquoise section.content.text div.inner p.name {
+  color: #5cb0b1;
+}
+body.yellow section.content.image div.inner blockquote::before,
+body.yellow section.content.image div.inner p.a,
+body.yellow section.content.image div.inner p.a:visited,
+body.yellow section.content.image div.inner p.name,
+body.yellow
+  section.content.image
+  div.video-access
+  div.description
+  blockquote::before,
+body.yellow section.content.image div.video-access div.description p.a,
+body.yellow section.content.image div.video-access div.description p.a:visited,
+body.yellow section.content.image div.video-access div.description p.name,
+body.yellow section.content.text div.inner blockquote::before,
+body.yellow section.content.text div.inner p.a,
+body.yellow section.content.text div.inner p.a:visited,
+body.yellow section.content.text div.inner p.name {
+  color: #fec82d;
+}
+@media only screen and (min-width: 601px) {
+  body.orange section.content.image a.popup-video:hover {
+    color: #ff734e !important;
+    border-color: #ff734e !important;
+  }
+  body.turquoise section.content.image a.popup-video:hover {
+    color: #5cb0b1 !important;
+    border-color: #5cb0b1 !important;
+  }
+  body.yellow section.content.image a.popup-video:hover {
+    color: #fec82d !important;
+    border-color: #fec82d !important;
+  }
+}
+b {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
+
+.texto-cargo {
+  height: auto;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+.texto-nombres {
+  height: auto;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+
