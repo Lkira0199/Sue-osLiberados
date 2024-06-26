@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2024 by original authors @ fontello.com</metadata>
+<defs>
+<font id="liberados" horiz-adv-x="1000" >
+<font-face font-family="liberados" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="menu-outline" unicode="&#xe800;" d="M885 38l-729 0q-21 0-37-16t-15-37 15-36 37-15l729 0q21 0 37 15t16 36-16 37-37 16z m0 104q65 0 111-46t45-111-45-110-111-46l-729 0q-65 0-110 46t-46 110 46 111 110 46l729 0z m0 261l-729 0q-21 0-37-16t-15-37 15-37 37-15l729 0q21 0 37 15t16 37-16 37-37 16z m0 104q65 0 111-46t45-111-45-110-111-46l-729 0q-65 0-110 46t-46 110 46 111 110 46l729 0z m0 260l-729 0q-21 0-37-15t-15-37 15-37 37-15l729 0q21 0 37 15t16 37-16 37-37 15z m0 105q65 0 111-46t45-111-45-110-111-46l-729 0q-65 0-110 46t-46 110 46 111 110 46l729 0z" horiz-adv-x="1041" />
+
+<glyph glyph-name="play-outline" unicode="&#xe801;" d="M104 610l0-520q1 0 1 1t1 0l265 259-262 256-3 3t-2 1z m0 105q44 0 74-30l343-335q-207-201-345-335-30-30-72-30t-73 31-31 74l0 520q0 44 31 74t73 31z" horiz-adv-x="521" />
+
+<glyph glyph-name="play-circle2" unicode="&#xe802;" d="M465 797q184 0 315-131t131-316-131-315-315-132-316 132-131 315 131 316 316 131z m-167-670l446 224-446 223 0-447z" horiz-adv-x="928" />
+
+<glyph glyph-name="down-open" unicode="&#xe803;" d="M939 399l-414-413q-10-11-25-11t-25 11l-414 413q-11 11-11 26t11 25l93 92q10 11 25 11t25-11l296-296 296 296q11 11 25 11t26-11l92-92q11-11 11-25t-11-26z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "fontello";
-  src: url("../fonts/fontello.eot?25777772");
-  src: url("../fonts/fontello.eot?25777772#iefix") format("embedded-opentype"),
-    url("../fonts/fontello.woff2?25777772") format("woff2"),
-    url("../fonts/fontello.woff?25777772") format("woff"),
-    url("../fonts/fontello.ttf?25777772") format("truetype"),
-    url("../fonts/fontello.svg?25777772#fontello") format("svg");
+  font-family: 'liberados';
+  src: url('../font/liberados.eot?73066430');
+  src: url('../font/liberados.eot?73066430#iefix') format('embedded-opentype'),
+      url('../font/liberados.woff2?73066430') format('woff2'),
+      url('../font/liberados.woff?73066430') format('woff'),
+      url('../font/liberados.ttf?73066430') format('truetype'),
+      url('../font/liberados.svg?73066430#liberados') format('svg');
   font-weight: 400;
   font-style: normal;
 }
@@ -13,7 +13,7 @@
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "fontello";
+  font-family: "liberados";
   font-style: normal;
   font-weight: 400;
   speak: none;
@@ -31,15 +31,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-menu:before {
-  content: "\e800";
-} /* '' */
-.icon-location:before {
-  content: "\e801";
-} /* '' */
-.icon-play:before {
-  content: "\e802";
-} /* '' */
+.icon-menu-outline:before { content: '\e800'; } /* '' */
+.icon-play-outline:before { content: '\e801'; } /* '' */
+.icon-play-circle2:before { content: '\e802'; } /* '' */
+.icon-down-open:before { content: '\e803'; } /* '' */
+
+
 
 a,
 abbr,
@@ -347,14 +344,8 @@ header button.menusidebar span {
     background-color: #cab229;
   }
 }
-header nav.main,
-.fondo {
-  
-  background-image: url(../img/bg-gray-light.png); /* Ruta de tu imagen */
-  height: 100%;
-  
-}
 
+header nav.main,
 section.home {
   background: #f5f5f5 url(../img/bg-gray-light.png);
   height: 100%;
@@ -512,12 +503,12 @@ body.orange header button.menusidebar {
   }
 }
 body.turquoise header button.menusidebar {
-  color: #000;
-  background-color: #5cb0b1;
+  color: #000000;
+  background-color: #ffffff;
 }
 @media only screen and (min-width: 601px) {
   body.turquoise header button.menusidebar:hover {
-    background-color: #85c4c5;
+    background-color: #a1bb5c;
   }
 }
 body.yellow header button.menusidebar {
@@ -590,7 +581,12 @@ section.home div.welcome {
     border-radius: 10px; /* Borde redondeado */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
     padding: 1.25rem;
+    transition: padding 0.5s ease;
   }
+  .contenedor_imagen_quienessomos:hover{
+    padding: 5px;
+  }
+
 }
 
 @media only screen and (min-width: 601px) {
@@ -621,6 +617,12 @@ section.home div.welcome {
 
 
 @media only screen and (max-width: 600px) {
+  .contenedor_padre_1 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
+  }
   .contenedor_padre_2 {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -632,7 +634,7 @@ section.home div.welcome {
     height: 10rem;
     display: inline-block;
     vertical-align: top;
-    /* Agrega márgenes alrededor del contenedor */
+    
     box-sizing: border-box; /* Incluye el padding y border en el ancho total */
 
     border: 0.125rem solid #160466; /* Grosor y color del borde */
@@ -640,6 +642,7 @@ section.home div.welcome {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
     padding: 1.25rem; /* Evita que los márgenes externos se sumen */
     margin-top: 5rem;
+    
   }
   .contenedor_portada-podcast img {
     width: 21.3rem;
@@ -655,11 +658,13 @@ section.home div.welcome {
   
 }
 .contenedor-padre_galeria h2{
-  color: #000;
+  color: rgb(97, 90, 90);
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   margin-top: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
 
 }
 
@@ -686,10 +691,9 @@ section.home div.welcome {
   
   
   .contenedor_galeria {
-    width: 100%;    
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 100%;   
+    
+    height: auto;
     
   }
 
@@ -700,11 +704,14 @@ section.home div.welcome {
     cursor: pointer;
     width: 350px;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 20px;
     box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
     display: inline-block;
-    margin: 3.5rem;
-    left: 1.5rem;
+    margin: 20px 139px;
+    box-shadow: 0px 0px 10px 2px black;    
+    -moz-box-shadow: 0px 0px 10px 2px black;
+    -webkit-box-shadow: 0px 0px 10px 2px black;
+    
 }
 .contenedor_galeria figure img{
     width: 100%;
@@ -728,7 +735,7 @@ section.home div.welcome {
     visibility: visible;
 }
 .contenedor_galeria figure:hover > .capa h3{
-    margin-top: 70px;
+    margin-top: 20px;
     margin-bottom: 15px;
 }
 .contenedor_galeria figure:hover > img{
@@ -740,10 +747,11 @@ section.home div.welcome {
     margin-bottom: 120px;
     transition: all 400ms ease-out;
     margin-top: 30px;
+    
 }
 .contenedor_galeria figure .capa p{
     color: #fff;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.5;
     width: 100%;
     max-width: 220px;
@@ -776,28 +784,52 @@ section.home div.welcome {
     margin-left: 10px;
     margin-top: -10px;
   }
+  .contenedor_galeria figure{
+    position:relative;
+    height: 2px;
+    cursor: pointer;
+    width: 2px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    display: inline-block;
+    
+  }
 }
 @media only screen and (min-width: 601px) {
   .contenedor_audios-podcast {
-    width: 18rem;
-    height: 18rem;
-    display: inline-block;
-    vertical-align: top;
-    margin: 1.875rem; /* Agrega márgenes alrededor del contenedor */
-    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
-
-    border: 0.125rem solid #160466; /* Grosor y color del borde */
-    border-radius: 0.625rem; /* Borde redondeado */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
-    padding: 1.25rem; /* Evita que los márgenes externos se sumen */
-    margin-top: 2rem;
+    
+    position: inline-block;;
+    width: 350px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 50px 80px rgb(0,0,0,0.50);
+    
   }
+  .contenedor_audios-podcast .contenedor_audios-podcast-img {
+    position: relative; 
+    width: 100%;
+    height: 20rem;
+  }
+
+  .contenedor_audios-podcast .contenedor_audios-podcast-img img {    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
   .contenedor_audios-podcast audio {
     width: 100%;
+    outline: none;
   }
-  .contenedor_audios-podcast img {
-    margin-left: 1rem;
-  }
+  
+
+  
 }
 
 @media only screen and (max-width: 600px) {
@@ -855,12 +887,13 @@ section.home div.welcome {
   
   .contenedor_galeria figure{
     position:relative;
-    height: 150px;
+    height: 250px;
     cursor: pointer;
-    width: 250px;
+    width: 350px;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    display: inline-block;
     margin: 2.2rem;
 }
 }
@@ -944,7 +977,7 @@ section.home div.welcome h1 {
   section.home div.welcome div.items {
     position: absolute;
     width: 79.5rem;
-    top: 6.25rem;
+    top: 15.25rem;
     left: 50%;
     transform-origin: top left;
     transform: translateX(-50%);
@@ -1573,22 +1606,24 @@ section.content.opening div.inner div.intro h1 span {
 }
 section.content.opening,
 section.content.text {
-  background-color: #ffffff;
+  background: linear-gradient(to right, #43c6ac, #120d75);
   min-height: 100vh;
   overflow: auto;
 }
 section.content.text div.about,
 section.content.text div.inner {
   width: 100%;
-  max-width: 41.875rem;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+    max-width: 34.375rem;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
 }
 @media only screen and (min-width: 601px) {
   section.content.text div.about,
   section.content.text div.inner {
     padding: 7.5rem 1.5625rem;
+    margin: 0 5.25rem  auto;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1710,6 +1745,8 @@ section.content.image div.inner {
   max-width: 34.375rem;
   position: relative;
   z-index: 1;
+  display: grid;
+  place-items: center;
 }
 @media only screen and (min-width: 601px) {
   section.content.image div.inner {
@@ -1862,6 +1899,7 @@ section.content.text div.video-access div.description p {
   font-weight: 400;
   color: #fff;
   margin: 0 0 1.25rem;
+  text-align: justify;
 }
 section.content.image div.about p b,
 section.content.image div.inner blockquote p b,
