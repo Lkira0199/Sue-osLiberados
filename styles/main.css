@@ -759,7 +759,7 @@ section.home div.welcome {
 .sectioninfo{  
   width: 100%;
   height: 100%;  
-  background-image: url("../img/infografia2.png");
+  background-image: url("../img/infografia22.webp");
   background-size: cover;
   min-height: 100vh;
   
@@ -829,7 +829,7 @@ section.home div.welcome {
     width: 400px;
     position: relative;
     height: 300px;
-    margin: 280px auto;
+    margin: auto;
     
     
   }
@@ -854,13 +854,12 @@ section.home div.welcome {
  .sectioninfo{
   width: 100%;
   height: 100vh;
-  background-image: url("../img/infografia2.png");
+  background-image: url("../img/infografia22.webp");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  padding-top: calc(50vh - 150px);/*
+  padding-top: calc(50vh - 150px);
   
- 
  }
   
 }
