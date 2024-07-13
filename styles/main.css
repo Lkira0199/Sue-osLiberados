@@ -543,6 +543,14 @@ section.home {
   }
 }
 
+.links{
+  position: relative;
+  top: 350px;
+  left: 100px;
+  right: ; 
+  bottom: ;
+}
+
 section.home div.definition {
   text-align: center;
   width: 100%;
